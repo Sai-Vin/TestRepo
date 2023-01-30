@@ -4,10 +4,15 @@
         <title>First HTML</title>
         <style>
             body {
-                background-image: url("https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Davos_AI_hero.max-1000x1000.jpg");
+                margin: 0;
+                /* background-color: green; */
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Edinburgh_Castle_from_the_south_east.JPG/375px-Edinburgh_Castle_from_the_south_east.JPG");
                 background-repeat: no-repeat;
-                background: contain;
-                min-height: 100vh;
+                background-position: 50% 75px; 
+                /* background-size: cover; */
+                /* background: contain;
+                min-height: 100vh; */
+                
             }
             #asulink {
                 color: green; font-size: 20px; background-color: 'blue'; font-family: 'Courier New', Courier, monospace;
@@ -26,6 +31,9 @@
             a.imglink img:active {
                 border: 5px purple;
             }
+            .border {
+                border-style: dashed;
+            }
         </style>
         <link>
     </head>
@@ -39,5 +47,7 @@
         <br>
         <a href="https://google.com" class='link' target="_blank" id="googlelink">Google</a>
         <a href="https://asu.edu" class='link' target="_blank" id="asulink">ASU</a>
+
+        <p class="border">This is a dashed border text</p>
     </body>
 </html>
