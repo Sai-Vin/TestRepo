@@ -2,6 +2,39 @@
 <html>
     <head>
         <title>Slideshow in jQuery</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .slide {
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: contain;
+                display: none;
+            }
+
+            .slide:nth-of-type(1){
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Falcon_1_Flight_4_liftoff.jpg/330px-Falcon_1_Flight_4_liftoff.jpg");
+            }
+            .slide:nth-of-type(2){
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg/255px-Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg");
+            }
+            .slide:nth-of-type(3){
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/CRS-8_%2826239020092%29.jpg/330px-CRS-8_%2826239020092%29.jpg");
+            }
+            .slide:nth-of-type(4){
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Starship_full_stack.jpg/144px-Starship_full_stack.jpg");
+            }
+            .slide:nth-of-type(5){
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Falcon_Heavy_Side_Boosters_landing_on_LZ1_and_LZ2_-_2018_%2825254688767%29.jpg/330px-Falcon_Heavy_Side_Boosters_landing_on_LZ1_and_LZ2_-_2018_%2825254688767%29.jpg");
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     </head>
     <body>
         <div id="slideshow">
