@@ -36,9 +36,23 @@
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
         <script>
-            function goNext() {
-                let current = parseInt($('#slideshow').attr(class))
+
+            function goToSlide(current) {
+                $('slide').fadeOut();
+                $('slide:nth-of-type('+current+')').fadeIn();
+                $('#nav button').removeClass("selected");
+                $("#nav button:nth-of-type("+current+")").addClass("selected");
+                $('#slideshow').attr('class', current);
             }
+            function goNext() {
+                var current = parseInt($('#slideshow').attr('class'))
+                var next = current + 1;
+                if (next > 5) {
+                    next = 1;
+                }
+            }
+
+
         </script>
     </head>
     <body onload="goToSlide(1)">
