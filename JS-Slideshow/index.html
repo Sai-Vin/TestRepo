@@ -15,7 +15,7 @@
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: contain;
-                /* display: none; */
+                display: none;
             }
 
             .slide:nth-of-type(1){
@@ -36,7 +36,26 @@
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
         <script>
-            
+            function goToSlide(current){
+                var slides = document.getElementsByClassName('slide')
+                for (let i = 0; i < slides.length; ++i) {
+                    if (i === current - 1) {
+                        slides[i].style.display = 'block'
+                    }
+
+                    else {
+                        slides[i].style.display = 'none';
+                    }
+                }
+            }
+            function goNext(){
+                var current = parseInt(document.getElementById('slideshow').className)
+                var next = current + 1;
+
+                if (next > 5) {
+                    next = 1;
+                }
+            }
         </script>
     </head>
     <body onload="goToSlide(1)">
