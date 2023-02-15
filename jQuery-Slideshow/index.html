@@ -52,7 +52,13 @@
                 }
             }
 
-
+            function goPrev() {
+                var current = parseInt($('#slideshow').attr('class'));
+                var prev = current - 1;
+                if (prev < 0) {
+                    prev = 5;
+                }
+            }
         </script>
     </head>
     <body onload="goToSlide(1)">
