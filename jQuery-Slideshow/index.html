@@ -8,6 +8,26 @@
                 padding: 0;
             }
 
+            .selected {
+                background-color: #000;
+                color: #fff;
+            }
+
+            #nav {
+                position: fixed;
+                bottom: 10px;
+                width: 80%;
+                left: 10%;
+                text-align: center;
+            }
+
+            #nav button {
+                border-radius: 50%; 
+            }
+            /* <!-- To make buttons 1-5 circular --> */
+
+            
+
             .slide {
                 width: 100vw;
                 height: 100vh;
@@ -78,7 +98,7 @@
             <button class="button" onclick="goToSlide(4)">4</button>
             <button class="button" onclick="goToSlide(5)">5</button>
         </div>
-        <button id="prev" onclick="goPrev()"></button>
-        <button id="next" onclick="goNext()"></button>
+        <button id="prev" onclick="goPrev()">Previous</button>
+        <button id="next" onclick="goNext()">Next</button>
     </body>
 </html>
