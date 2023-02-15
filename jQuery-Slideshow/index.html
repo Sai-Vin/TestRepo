@@ -35,8 +35,11 @@
             }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script>
+            
+        </script>
     </head>
-    <body onload="$('slide.nth-nth-of-type(1)').fadeIn()">
+    <body onload="goToSlide(1)">
         <div id="slideshow">
             <div class="slide"></div>
             <div class="slide"></div>
@@ -44,5 +47,14 @@
             <div class="slide"></div>
             <div class="slide"></div>
         </div>
+        <div id="nav">
+            <button class="button" onclick="goToSlide(1)">1</button>
+            <button class="button" onclick="goToSlide(2)">2</button>
+            <button class="button" onclick="goToSlide(3)">3</button>
+            <button class="button" onclick="goToSlide(4)">4</button>
+            <button class="button" onclick="goToSlide(5)">5</button>
+        </div>
+        <button id="prev" onclick="goPrev()"></button>
+        <button id="next" onclick="goNext()"></button>
     </body>
 </html>
