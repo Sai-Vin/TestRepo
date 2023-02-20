@@ -13,11 +13,50 @@
         <!-- <button id="prev">Prev</button>
         <button id="next">Next</button> -->
 
-        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red" href="javascript.goPrev()"><i class="material-icons">add</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red" href="javascript.goNext()"><i class="material-icons">add</i></a>
 
     </body>
     <script>
+
+function goNext(){
+                var current = parseInt(document.getElementById('slideShow').className);
+                var next = current + 1;
+                if(next > allImages.length){
+                    next = 1;
+                }
+                goToSlide(next);
+            }
+            function goPrev(){
+                var current = parseInt(document.getElementById('slideShow').className);
+                var prev = current - 1;
+                if(prev < 1){
+                    prev = allImages.length;
+                }
+                goToSlide(prev);
+            }
+            function goToSlide(current){
+               // $('.slide').fadeOut();
+               // $('.slide:nth-of-type('+current+')').fadeIn();
+
+               document.getElementById("slideShow").style.transform = "translateX(-"+(current-1)*100+"vw)";
+                //$("#nav button").removeClass("selected");
+                //$("#nav button:nth-of-type("+current+")").addClass("selected");
+
+                    // try and complete this part
+                var buttons = document.getElementsByClassName('button');
+                for(var i = 0; i < buttons.length; i++){
+                    if(i == current-1){
+                        buttons[i].className = 'button selected';
+                    }
+                    else{
+                        buttons[i].className = 'button';
+                    }
+                }
+
+                //$('#slideShow').attr('class', current);
+                document.getElementById('slideShow').className = current;
+            }
         var allImages = [];
         function start() {
             var hash = window.location.hash.replace('#', '')
