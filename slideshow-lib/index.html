@@ -10,13 +10,24 @@
         <div id = "slidecontainer"></div>
         <div id="numContainer"></div>
 
-        <button id="prev">Prev</button>
-        <button id="next">Next</button>
+        <!-- <button id="prev">Prev</button>
+        <button id="next">Next</button> -->
+
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
     </body>
     <script>
         var allImages = [];
         function start() {
-            var hash = window
+            var hash = window.location.hash.replace('#', '')
+            allImages = hash.split(',')
+            var markup = ""
+            for (var i = 0; i < allImages.length; ++i) {
+                markup += "<div style = 'background-image: url('" + allImage[i] + "')' class = 'slide' id='slide></div>'"
+            }
+
+            document.getElementById('slidecontainer').innerHTML = markup;
         }
     </script>
 </html>
