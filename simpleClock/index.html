@@ -74,17 +74,17 @@
 
             #hour {
                 width: 100px;
-                background-color: blue;
+                background-color: royalblue;
             }
 
             #minute {
                 width: 135px;
-                background-color: black;
+                background-color: sandybrown;
             }
 
             #second {
                 width: 150px;
-                background-color: green;
+                background-color: teal;
 
             }
         </style>
@@ -124,6 +124,13 @@
             document.getElementById("minute").style.transform = "translate(150px, 150px) rotate(" + minuteAngle + "deg)"
             var hourAngle = (hour-3) * (360/12) + (minute * (30/60))
             document.getElementById("hour").style.transform = "translate(150px, 150px) rotate(" + hourAngle + "deg)"
+
+            if (hour > 6 && hour < 18) {
+                document.body.style.filter = "none";
+            }
+            else {
+                document.body.style.filter = "invert(1)"
+            }
 
         }
     </script>
