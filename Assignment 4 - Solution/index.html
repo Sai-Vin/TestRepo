@@ -54,6 +54,8 @@
 </body>
 <script>
     var allImages = [];
+    var aniType = allImages[allImages.length - 1]
+
     function start() {
         var hash = window.location.hash.replace('#', '');
         allImages = hash.split(',');
@@ -84,6 +86,7 @@
     }
     function goToSlide(current) {
         var slides = document.getElementsByClassName('slide');
+        
         for (var i = 0; i < slides.length; i++) {
             if (i == current - 1) {
                 slides[i].style.opacity = '1';
